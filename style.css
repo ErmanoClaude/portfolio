@@ -21,7 +21,7 @@ html {
 
 * {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid black; 
   margin: 0;
   padding: 0;
 }
@@ -55,7 +55,7 @@ nav a {
   height: 100%;
   padding: 3px;
   border-radius: 2%;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .nav-link-container:hover {
@@ -89,14 +89,13 @@ nav a {
   font-weight: 500;
 }
 
-
 /* second project section */
 #projects {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: var(--projects-background-color)
+  background-color: var(--projects-background-color);
 }
 
 #projects .title {
@@ -109,17 +108,37 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--secondary-background-color)
-}
-
-#contact svg {
-  height: 48px;
-  width: 48px;
-  cursor: pointer;
+  gap: 10%;
+  background-color: var(--secondary-background-color);
+  
 }
 
 .logos {
   display: flex;
-  width: 80%;
+  width: 70%;
   justify-content: space-evenly;
 }
+
+#contact a {
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.5s ease;
+}
+
+
+#contact a:hover {
+   transform: translateY(5px); 
+}
+
+#contact svg {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(2px 1px 4px rgba(255, 255, 255, 0.3));
+}
+
+
+
+
