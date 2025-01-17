@@ -21,14 +21,14 @@ html {
 
 * {
   box-sizing: border-box;
-  border: 1px solid black; 
+  border: 1px dashed black;
   margin: 0;
   padding: 0;
 }
 
 section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 nav {
@@ -98,8 +98,45 @@ nav a {
   background-color: var(--projects-background-color);
 }
 
+#projects .sub-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  width: 20%;
+  
+}
+
+.full-stack_projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-evenly;
+  width: 80%;
+  padding: 10px;
+}
+
+.full-stack_projects a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 15px 10px;
+  width: 30vw;
+}
+
+.full-stack_projects img {
+  width: 100%;
+}
+
 #projects .title {
   text-decoration: underline;
+}
+
+.front_back_sections {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Third Contact Section */
@@ -110,7 +147,6 @@ nav a {
   flex-direction: column;
   gap: 10%;
   background-color: var(--secondary-background-color);
-  
 }
 
 .logos {
@@ -128,9 +164,8 @@ nav a {
   transition: transform 0.5s ease;
 }
 
-
 #contact a:hover {
-   transform: translateY(5px); 
+  transform: translateY(5px);
 }
 
 #contact svg {
@@ -138,7 +173,3 @@ nav a {
   width: 100%;
   filter: drop-shadow(2px 1px 4px rgba(255, 255, 255, 0.3));
 }
-
-
-
-
