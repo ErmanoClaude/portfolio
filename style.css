@@ -11,6 +11,7 @@
   --projects-background-color: #1e3a5f; /* Deep blue with subtle red undertone */
   --projects-text-color: #f2f5f7; /* Soft, off-white text */
   --projects-highlight-color: #6ab0f3; /* Light sky blue for highlights */
+  --projects-card-color: #303841; /* soft slate grey */
 }
 
 html {
@@ -39,7 +40,9 @@ nav {
   gap: 6%;
   padding-right: 5%;
   background-color: var(--highlight-color);
-  height: 40px;
+  height: 5vh;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
@@ -94,6 +97,9 @@ nav a {
   display: flex;
   align-items: center;
   flex-direction: column;
+  row-gap: 20px;
+  padding-bottom: 30px;
+  padding-top: 5vh;
   width: 100%;
   background-color: var(--projects-background-color);
 }
@@ -103,8 +109,7 @@ nav a {
   justify-content: center;
   align-items: center;
   padding-left: 5px;
-  width: 20%;
-  
+  width: 20vw;
 }
 
 .full-stack_projects {
@@ -113,7 +118,7 @@ nav a {
   flex-wrap: wrap;
   row-gap: 20px;
   justify-content: space-evenly;
-  width: 80%;
+  width: 75vw;
   padding: 10px;
 }
 
@@ -122,12 +127,75 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 10px;
   padding: 10px 10px 15px 10px;
   width: 30vw;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--projects-card-color);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-stack_projects a:visited,
+.full-stack_project a:hover {
+  color: inherit;
+}
+
+.full-stack_projects a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+}
+
+.project-caption {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.project-title {
+  font-size: 25px;
+  margin-top: -2px;
+  align-self: flex-start;
+}
+
+.open-caption,
+.close-angle {
+  font-size: 18px;
+}
+
+.forward-slash {
+  align-self: flex-start;
+  font-weight: 800;
+  font-size: 33px;
+  margin-top: -10px;
+  margin-right: -4px;
+}
+
+.open-caption,
+.close-caption {
+  visibility: hidden;
+  color: #ff4040;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.3s ease-in-out;
+}
+
+.close-caption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project:hover .open-caption,
+.project:hover .close-caption {
+  visibility: visible;
+  opacity: 1;
 }
 
 .full-stack_projects img {
   width: 100%;
+  border: 1px solid black;
 }
 
 #projects .title {
@@ -138,6 +206,8 @@ nav a {
   display: flex;
   flex-direction: row;
 }
+
+
 
 /* Third Contact Section */
 #contact {
