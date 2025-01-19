@@ -17,7 +17,10 @@
 html {
   font-family: "Roboto Mono", sans-serif;
   color: var(--text-color);
-  scroll-behavior: smooth;
+}
+
+*, html {
+  scroll-behavior: smooth !important;
 }
 
 * {
@@ -41,6 +44,7 @@ nav {
   padding-right: 5%;
   background-color: var(--highlight-color);
   height: 5vh;
+  z-index: 1000;
   position: sticky;
   top: 0;
 }
