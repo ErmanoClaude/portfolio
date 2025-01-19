@@ -40,7 +40,9 @@ nav {
   gap: 6%;
   padding-right: 5%;
   background-color: var(--highlight-color);
-  height: 40px;
+  height: 5vh;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
@@ -97,7 +99,7 @@ nav a {
   flex-direction: column;
   row-gap: 20px;
   padding-bottom: 30px;
-  padding-top: 20px;
+  padding-top: 5vh;
   width: 100%;
   background-color: var(--projects-background-color);
 }
