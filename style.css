@@ -27,7 +27,6 @@ html {
 
 * {
   box-sizing: border-box;
-  border: 1px solid black;
   margin: 0;
   padding: 0;
 }
@@ -221,6 +220,7 @@ nav a {
   align-items: center;
   flex-direction: column;
   gap: 10%;
+  row-gap: 3vh;
   background-color: var(--secondary-background-color);
 }
 
@@ -252,9 +252,7 @@ nav a {
 /* Between 1025px and 1920px (desktops to tablets) */
 @media (min-width: 1025px) and (max-width: 1400px) {
   /* Styles for larger tablets to desktops */
-  h1 {
-    color: blue !important;
-  }
+
   .project-title {
     font-size: 1.2rem;
   }
@@ -266,9 +264,7 @@ nav a {
 /* Between 769px and 1024px (tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Styles for tablets */
-  h1 {
-    color: red !important;
-  }
+
   .project-title {
     font-size: 0.85rem;
   }
@@ -283,17 +279,15 @@ nav a {
 /* Below 768px (phones and smaller devices) */
 @media (max-width: 768px) {
   /* Styles for phones */
-  h1 {
-    color: green !important;
-  }
-    .project-title {
-    font-size: 0.82rem;
+
+  .project-title {
+    font-size: 0.76rem;
   }
   #projects .sub-title {
-    font-size: 1.55rem;
+    font-size: 1.50rem;
   }
   #projects .title {
-    font-size: 1.33rem;
+    font-size: 1.30rem;
   }
   
   .front_back_sections {
@@ -310,13 +304,13 @@ nav a {
   }
   
   #welcome-section .title {
-    font-size: 1.70rem;
+    font-size: 1.65rem;
   }
   #welcome-section .sub-title {
-    font-size: 1.35rem;
+    font-size: 1.30rem;
   }
   
   #contact .title {
-    font-size: 1.70rem;
+    font-size: 1.65rem;
   }
 }
