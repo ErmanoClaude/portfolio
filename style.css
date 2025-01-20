@@ -17,9 +17,11 @@
 html {
   font-family: "Roboto Mono", sans-serif;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
-*, html {
+*,
+html {
   scroll-behavior: smooth !important;
 }
 
@@ -133,7 +135,7 @@ nav a {
   align-items: center;
   row-gap: 10px;
   padding: 10px 10px 15px 10px;
-  width: 30vw;
+  width: 35vw;
   text-decoration: none;
   color: inherit;
   background-color: var(--projects-card-color);
@@ -154,14 +156,15 @@ nav a {
 .project-caption {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
+  width: 100%;
   gap: 10px;
 }
 
 .project-title {
   font-size: 1.56rem;
-  margin-top: -2px;
-  align-self: flex-start;
+  text-wrap: nowrap;
 }
 
 .open-caption,
@@ -172,7 +175,7 @@ nav a {
 .forward-slash {
   align-self: flex-start;
   font-weight: 800;
-  font-size: 33px;
+  font-size: 2.06rem;
   margin-top: -10px;
   margin-right: -4px;
 }
@@ -211,8 +214,6 @@ nav a {
   flex-direction: row;
 }
 
-
-
 /* Third Contact Section */
 #contact {
   display: flex;
@@ -248,10 +249,74 @@ nav a {
   filter: drop-shadow(2px 1px 4px rgba(255, 255, 255, 0.3));
 }
 
-
-
-@media (max-width: 1023px) {
+/* Between 1025px and 1920px (desktops to tablets) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  /* Styles for larger tablets to desktops */
   h1 {
     color: blue !important;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  #projects .sub-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Between 769px and 1024px (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  h1 {
+    color: red !important;
+  }
+  .project-title {
+    font-size: 0.85rem;
+  }
+  #projects .sub-title {
+    font-size: 1.8rem;
+  }
+  #projects .title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Below 768px (phones and smaller devices) */
+@media (max-width: 768px) {
+  /* Styles for phones */
+  h1 {
+    color: green !important;
+  }
+    .project-title {
+    font-size: 0.82rem;
+  }
+  #projects .sub-title {
+    font-size: 1.55rem;
+  }
+  #projects .title {
+    font-size: 1.33rem;
+  }
+  
+  .front_back_sections {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .full-stack_projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  .full-stack_projects a {
+    width: 65vw;
+  }
+  
+  #welcome-section .title {
+    font-size: 1.70rem;
+  }
+  #welcome-section .sub-title {
+    font-size: 1.35rem;
+  }
+  
+  #contact .title {
+    font-size: 1.70rem;
   }
 }
