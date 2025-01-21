@@ -27,6 +27,7 @@ html {
 
 * {
   box-sizing: border-box;
+/*   border: 1px dashed black; */
   margin: 0;
   padding: 0;
 }
@@ -246,8 +247,72 @@ nav a {
 #contact svg {
   height: 100%;
   width: 100%;
-  filter: drop-shadow(2px 1px 4px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(2px 1px 4px rgba(0, 0, 0, 0.8));
 }
+
+
+/* Email Modal */
+.modal-background {
+  background-color: rgba(0,0,0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+}
+.email-modal {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--highlight-color);
+  width: 85vw;
+  height: 30vh;
+  border-radius: 10px;
+}
+.closing-modal {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 9px;
+  width: 100%;
+}
+.close-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.close-button-svg {
+  height: 24px;
+  width: 24px;
+}
+
+.copy-icons {
+  height: 27px;
+  width: 27px;
+}
+
+#check-clipboard {
+  display: none;
+  color: #32CD32;
+}
+
+
+.email {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Screen Sizes Adjustments */
 
 /* Between 1025px and 1920px (desktops to tablets) */
 @media (min-width: 1025px) and (max-width: 1400px) {
